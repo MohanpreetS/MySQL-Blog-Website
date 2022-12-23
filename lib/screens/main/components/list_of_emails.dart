@@ -3,7 +3,7 @@ import 'package:outlook/components/side_menu.dart';
 import 'package:outlook/models/Email.dart';
 import 'package:outlook/responsive.dart';
 import 'package:outlook/screens/email/email_screen.dart';
-import 'package:websafe_svg/websafe_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 import 'email_card.dart';
@@ -63,7 +63,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                           suffixIcon: Padding(
                             padding: const EdgeInsets.all(
                                 kDefaultPadding * 0.75), //15
-                            child: WebsafeSvg.asset(
+                            child: SvgPicture.asset(
                               "assets/Icons/Search.svg",
                               width: 24,
                             ),
@@ -84,7 +84,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Row(
                   children: [
-                    WebsafeSvg.asset(
+                    SvgPicture.asset(
                       "assets/Icons/Angle down.svg",
                       width: 16,
                       color: Colors.black,
@@ -98,7 +98,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                     MaterialButton(
                       minWidth: 20,
                       onPressed: () {},
-                      child: WebsafeSvg.asset(
+                      child: SvgPicture.asset(
                         "assets/Icons/Sort.svg",
                         width: 16,
                       ),

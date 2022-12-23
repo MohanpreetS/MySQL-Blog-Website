@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:outlook/responsive.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../constants.dart';
 import '../extensions.dart';
@@ -47,7 +47,7 @@ class SideMenu extends StatelessWidget {
                 ),
                 color: kPrimaryColor,
                 onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Edit.svg", width: 16),
+                icon: SvgPicture.asset("assets/Icons/Edit.svg", width: 16),
                 label: Text(
                   "New message",
                   style: TextStyle(color: Colors.white),
@@ -67,7 +67,7 @@ class SideMenu extends StatelessWidget {
                 ),
                 color: kBgDarkColor,
                 onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
+                icon: SvgPicture.asset("assets/Icons/Download.svg", width: 16),
                 label: Text(
                   "Get messages",
                   style: TextStyle(color: kTextColor),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outlook/models/Email.dart';
-import 'package:websafe_svg/websafe_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 import '../../../extensions.dart';
@@ -79,7 +79,7 @@ class EmailCard extends StatelessWidget {
                           ),
                           SizedBox(height: 5),
                           if (email.isAttachmentAvailable)
-                            WebsafeSvg.asset(
+                            SvgPicture.asset(
                               "assets/Icons/Paperclip.svg",
                               color: isActive ? Colors.white70 : kGrayColor,
                             )
@@ -127,7 +127,7 @@ class EmailCard extends StatelessWidget {
               Positioned(
                 left: 8,
                 top: 0,
-                child: WebsafeSvg.asset(
+                child: SvgPicture.asset(
                   "assets/Icons/Markup filled.svg",
                   height: 18,
                   color: email.tagColor,
