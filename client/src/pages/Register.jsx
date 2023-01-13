@@ -13,6 +13,9 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
 
   return (
@@ -24,18 +27,21 @@ const Register = () => {
           type="text"
           placeholder="username"
           name="username"
+          onChange={handleChange}
         />
         <input
           required
           type="email"
           placeholder="email"
           name="email"
+          onChange={handleChange}
         />
         <input
           required
           type="password"
           placeholder="password"
           name="password"
+          onChange={handleChange}
         />
         <button >Register</button>
         {err && <p>{err}</p>}
