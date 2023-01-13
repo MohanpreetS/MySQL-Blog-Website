@@ -16,6 +16,10 @@ const Login = () => {
   const { login } = useContext(AuthContext);
 
 
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <div className="auth">
       <h1>Login</h1>
@@ -25,6 +29,7 @@ const Login = () => {
           type="text"
           placeholder="username"
           name="username"
+          onChange={handleChange}
         />
         <input
           required
