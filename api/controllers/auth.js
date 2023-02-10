@@ -17,7 +17,10 @@ export const register = (req, res) => {
     const q = "INSERT INTO users(`username`,`email`,`password`) VALUES (?)";
     const values = [req.body.username, req.body.email, hash];
 
-   
+    db.query(q, [values], (err, data) => {
+      if (err) return res.status(500).json(err);
+      return res.status(200).json("User has been created.");
+    });
   });
 };
 
