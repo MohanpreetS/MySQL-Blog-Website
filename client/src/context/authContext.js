@@ -13,7 +13,14 @@ export const AuthContexProvider = ({ children }) => {
     setCurrentUser(res.data);
   };
 
- 
+  const logout = async (inputs) => {
+    await axios.post("/auth/logout");
+    setCurrentUser(null);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(currentUser));
+  }, [currentUser]);
 
   return (
     <AuthContext.Provider value={{ currentUser, login, logout }}>
