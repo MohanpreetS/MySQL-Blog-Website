@@ -14,6 +14,16 @@ const Write = () => {
 
   const navigate = useNavigate()
 
+  const upload = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const res = await axios.post("/upload", formData);
+      return res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleClick = async (e) => {
     e.preventDefault();
